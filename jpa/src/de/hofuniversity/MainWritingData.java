@@ -48,13 +48,17 @@ public class MainWritingData {
 	System.out.println("...fertig");
 	
 	System.out.println("Lade teams.xml...");
-	new XMLTeamsReader(new FileReader("data/teams.xml")).readAllTeams();
+	
+	new XMLTeamsReader(XMLTeamsReader.class.getResourceAsStream("data/teams.xml")).readAllTeams();
+//	new XMLTeamsReader(new FileReader("data/teams.xml")).readAllTeams();
 	System.out.println("...fertig");
 	System.out.println("Lade stadium.xml...");
-	new XMLStadiumsReader(new FileReader("data/stadium.xml")).readAllStadiums();
+	new XMLStadiumsReader(XMLStadiumsReader.class.getResourceAsStream("data/stadium.xml")).readAllStadiums();
+//	new XMLStadiumsReader(new FileReader("data/stadium.xml")).readAllStadiums();
 	System.out.println("...fertig");
 	System.out.println("Lade matches.xml...");
-	new XMLMatchesReader(new FileReader("data/matches.xml")).readAllMatches();
+	new XMLMatchesReader(XMLMatchesReader.class.getResourceAsStream("data/matches.xml")).readAllMatches();
+//	new XMLMatchesReader(new FileReader("data/matches.xml")).readAllMatches();
 	System.out.println("...fertig");
 	
 	int index = 0;
