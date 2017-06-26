@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<stadien>
+  <stadion id="1" team="100">
+    <name>Imtech Arena</name>
+    <location>
+      <city>Hamburg</city>
+      <adress>Sylvesterallee 7, 22525 Hamburg</adress>
+    </location>
+    <places>57000</places>
+    <images>
+      <outside url="https://upload.wikimedia.org/wikipedia/commons/d/de/RK_1009_9831_Volksparkstadion.jpg"/>
+      <inside url="https://media.holidaycheck.com/data/urlaubsbilder/images/41/1168124199.jpg"/>
+    </images>
+    <longitude>9.898611</longitude>
+    <latitude>53.586944</latitude>
+  </stadion>
+  <stadion id="2" team="9">
+    <name>Veltins Arena</name>
+    <location>
+      <city>Gelsenkirchen</city>
+      <adress>Arenaring 1, 45891 Gelsenkirchen</adress>
+    </location>
+    <places>54740</places>
+    <images>
+      <outside url="https://i.ytimg.com/vi/NS_yzZ7ZeXY/maxresdefault.jpg"/>
+      <inside url="http://s.weltsport.net/picmon/41/dWI_2ea4d_l.jpg"/>
+    </images>
+    <longitude>7.067642</longitude>
+    <latitude>51.554474</latitude>
+  </stadion>
+  <stadion id="3" team="7">
+    <name>Westfalenstadion</name>
+    <location>
+      <city>Dortmund</city>
+      <adress>Strobelallee 50, 44139 Dortmund</adress>
+    </location>
+    <places>65851</places>
+    <images>
+      <outside url="http://www.liftbilder.de/img/galerie/westfalenstadion-dortmund.jpg"/>
+      <inside url="http://livedoor.blogimg.jp/hubc9189-suitasapo/imgs/7/a/7a2e6915.jpg"/>
+    </images>
+    <longitude>7.451667</longitude>
+    <latitude>51.4925</latitude>
+  </stadion>
+  <stadion id="4" team="6">
+    <name>BayArena</name>
+    <location>
+      <city>Leverkusen</city>
+      <adress>Bismarckstraße 122-124, 51373 Leverkusen</adress>
+    </location>
+    <places>30210</places>
+    <images>
+      <outside url="http://footballtripper.com/wp-content/uploads/2014/08/bay-arena-aerial.jpg"/>
+      <inside url="http://www.bayer04.de/bilder/08_09/05_460/3D-VHausBayArena.jpg"/>
+    </images>
+    <longitude>7.001944</longitude>
+    <latitude>51.038056</latitude>
+  </stadion>
+  <stadion id="5" team="40">
+    <name>Allianz Arena</name>
+    <location>
+      <city>München</city>
+      <adress>Werner-Heisenberg-Allee 25, 80939 München</adress>
+    </location>
+    <places>75000</places>
+    <images>
+      <outside url="https://upload.wikimedia.org/wikipedia/commons/d/d5/Allianz_arena_daylight_Richard_Bartz.jpg"/>
+      <inside url="http://thermenhotel-erding.de/wp-content/uploads/2012/04/BI_8932.jpg"/>
+    </images>
+    <longitude>11.624444</longitude>
+    <latitude>48.218611</latitude>
+  </stadion>
+  <stadion id="6" team="131">
+    <name>Volkswagen Arena</name>
+    <location>
+      <city>Wolfsburg</city>
+      <adress>In den Allerwiesen 1, 38446 Wolfsburg</adress>
+    </location>
+    <places>30000</places>
+    <images>
+      <outside url="http://c8.alamy.com/comp/CR7PA0/aerial-view-volkswagen-arena-football-stadium-wolfsburg-lower-saxony-CR7PA0.jpg"/>
+      <inside url="http://www.uefa.com/MultimediaFiles/Photo/competitions/DomesticLeague/01/67/26/75/1672675_w2.jpg"/>
+    </images>
+    <longitude>10.803889</longitude>
+    <latitude>52.431944</latitude>
+  </stadion>
+  <stadion id="7" team="16">
+    <name>Mercedes-Benz Arena</name>
+    <location>
+      <city>Stuttgart</city>
+      <adress>Mercedesstraße 87, 70372 Stuttgart</adress>
+    </location>
+    <places>54812</places>
+    <images>
+      <outside url="https://files1.structurae.de/files/photos/87/daimler02.jpg"/>
+      <inside url="https://www.easyticket.de/files/media/6733/mercedes-benz-arena.a8a10569144cfa48fd14c37b54a694f6.jpg"/>
+    </images>
+    <longitude>9.231944</longitude>
+    <latitude>48.792222</latitude>
+  </stadion>
+  <stadion id="8" team="134">
+    <name>Weserstadion</name>
+    <location>
+      <city>Bremen</city>
+      <adress>Franz-Böhmert-Straße 1, 28205 Bremen</adress>
+    </location>
+    <places>42358</places>
+    <images>
+      <outside url="http://www.stadionbetreiber.de/fileadmin/styles/img/carousel/Bremer_Weser-Stadion.jpg"/>
+      <inside url="https://upload.wikimedia.org/wikipedia/commons/b/b1/Weserstadion_Agosto_2011.jpg"/>
+    </images>
+    <longitude>8.837628</longitude>
+    <latitude>53.066394</latitude>
+  </stadion>
+  <stadion id="9" team="87">
+    <name>Borussia-Park</name>
+    <location>
+      <city>Mönchengladbach</city>
+      <adress>Hennes-Weisweiler-Allee 1, 41179 Mönchengladbach</adress>
+    </location>
+    <places>46287</places>
+    <images>
+      <outside url="http://www.express.de/image/24217488/2x1/940/470/a5557dcdfe4e8d78b3095c9cf4a41f36/MU/borussia-park.jpg"/>
+      <inside url="http://www.info-stades.fr/forum/ressources/image/66801"/>
+    </images>
+    <longitude>6.385556</longitude>
+    <latitude>51.174444</latitude>
+  </stadion>
+  <stadion id="10" team="55">
+    <name>AWD-Arena</name>
+    <location>
+      <city>Hannover</city>
+      <adress>Robert-Enke-Straße 3, 30169 Hannover</adress>
+    </location>
+    <places>49200</places>
+    <images>
+      <outside url="http://i2.pinger.pl/pgr275/a6239db3000bbdd049e50830/AWD+Arena+(4).jpg"/>
+      <inside url="http://www.stiftlandadler.de/images/awdarenahannover01.jpg"/>
+    </images>
+    <longitude>9.731111</longitude>
+    <latitude>52.36</latitude>
+  </stadion>
+  <stadion id="11" team="112">
+    <name>Mage Solar Stadion</name>
+    <location>
+      <city>Freiburg</city>
+      <adress>Schwarzwaldstraße 193, 79117 Freiburg im Breisgau</adress>
+    </location>
+    <places>18000</places>
+    <images>
+      <outside url="http://ais.badische-zeitung.de/piece/05/0e/b3/44/84849476.jpg"/>
+      <inside url="http://ais.badische-zeitung.de/piece/04/2d/48/fe/70076670.jpg"/>
+    </images>
+    <longitude>7.893056</longitude>
+    <latitude>47.988889</latitude>
+  </stadion>
+  <stadion id="12" team="95">
+    <name>SGL Arena</name>
+    <location>
+      <city>Augsburg</city>
+      <adress>Bürgermeister-Ulrich-Straße 90, 86199 Augsburg</adress>
+    </location>
+    <places>30660</places>
+    <images>
+      <outside url="http://juergen-marks.de/wp-content/uploads/2014/09/SGL-arena.jpg"/>
+      <inside url="https://cdn1.diginights.com/uploads/images/location/w/w/wwk-arena-augsburg/preview_image2-default-1.jpg"/>
+    </images>
+    <longitude>10.885996</longitude>
+    <latitude>48.323126</latitude>
+  </stadion>
+  <stadion id="13" team="91">
+    <name>Commerzbank-Arena</name>
+    <location>
+      <city>Frankfurt</city>
+      <adress>Mörfelder Landstraße 362, 60528 Frankfurt am Main</adress>
+    </location>
+    <places>51500</places>
+    <images>
+      <outside url="http://www.coltgroup.com/assets/images/b/Commerzbank-Arena-54a9897b.jpg"/>
+      <inside url="http://www.eintracht.de/fileadmin/_horusdam/57-PereiraArena110214_10.jpg"/>
+    </images>
+    <longitude>8.645278</longitude>
+    <latitude>50.068611</latitude>
+  </stadion>
+  <stadion id="14" team="185">
+    <name>ESPRIT Arena</name>
+    <location>
+      <city>Düsseldorf</city>
+      <adress>Arena-Straße 1, 40474 Düsseldorf</adress>
+    </location>
+    <places>54600</places>
+    <images>
+      <outside url="http://www.stadionwelt.de/sw_stadien/fotos/stadionguides/deutschland/ltu_arena/luft/140.jpg"/>
+      <inside url="http://www.soke2.de/wp-content/uploads/2013/02/130202_duesseldorfesprit-arena_soke2.de008.jpg"/>
+    </images>
+    <longitude>6.733083</longitude>
+    <latitude>51.261539</latitude>
+  </stadion>
+  <stadion id="15" team="79">
+    <name>Grundig Stadion</name>
+    <location>
+      <city>Nürnberg</city>
+      <adress>Max-Morlock-Platz 1, 90471 Nürnberg</adress>
+    </location>
+    <places>50000</places>
+    <images>
+      <outside url="http://www.knauscamp.de/typo3temp/pics/c6744714cd.jpg"/>
+      <inside url="http://www.ndr.de/sport/fussball/zweitebundesliga/stadion430_v-vierspaltig.jpg"/>
+    </images>
+    <longitude>11.125833</longitude>
+    <latitude>49.426389</latitude>
+  </stadion>
+  <stadion id="16" team="81">
+    <name>Bruchwegstadion</name>
+    <location>
+      <city>Mainz</city>
+      <adress>Dr.-Martin-Luther-King-Weg, 55122 Mainz</adress>
+    </location>
+    <places>20300</places>
+    <images>
+      <outside url="http://www.mainz05.de/mainz05/uploads/tx_ajaxcontentelement/bruchwegstadion.jpg"/>
+      <inside url="http://img2.webme.com/pic/d/die-hochemer-riesling-stuermer/bruchwegstadion2.jpg"/>
+    </images>
+    <longitude>8.245556</longitude>
+    <latitude>50.000833</latitude>
+  </stadion>
+  <stadion id="17" team="115">
+    <name>Trolli Arena</name>
+    <location>
+      <city>Fürth</city>
+      <adress>Laubenweg 60, 90765 Fürth</adress>
+    </location>
+    <places>18000</places>
+    <images>
+      <outside url="http://bilder.t-online.de/b/57/73/30/16/id_57733016/920/tid_da/trolli-arena.jpg"/>
+      <inside url="http://www.greuther-fuerth.de/uploads/pics/DSC_9421_01.JPG"/>
+    </images>
+    <longitude>10.999167</longitude>
+    <latitude>49.486944</latitude>
+  </stadion>
+  <stadion id="18" team="123">
+    <name>Rhein-Neckar Arena</name>
+    <location>
+      <city>Sinsheim</city>
+      <adress>Dietmar-Hopp-Straße 1, 74889 Sinsheim</adress>
+    </location>
+    <places>30150</places>
+    <images>
+      <outside url="http://img.fotocommunity.com/rhein-neckar-arena-9b406ce6-7364-4e9f-b414-fa17dcb4a55b.jpg?width=1000"/>
+      <inside url="http://www.afa-architekturmagazin.de/wp-content/uploads/2013/03/rhein_neckar_arena-950x360.jpg"/>
+    </images>
+    <longitude>8.887657</longitude>
+    <latitude>49.238014</latitude>
+  </stadion>
+</stadien>
