@@ -1,19 +1,13 @@
 package de.hofuniversity.bean;
 
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+import javax.ejb.Stateless;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.TypedQuery;
-import javax.transaction.Transactional;
 
 import de.hofuniversity.bean.tablelist.DefaultTeamGroupSummaryData;
 import de.hofuniversity.bean.tablelist.TableListComparator;
@@ -21,27 +15,30 @@ import de.hofuniversity.bean.tablelist.TeamGroupSummaryData;
 import de.hofuniversity.core.Match;
 import de.hofuniversity.core.Result;
 import de.hofuniversity.core.Team;
+import de.hofuniversity.queries.MatchQuery;
+import de.hofuniversity.queries.TeamQuery;
 
 //@Transactional
 @ManagedBean
 @ViewScoped
+@Stateless
 public class TableListBean {
-    private static EntityManagerFactory	ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory("SSP-Soccer-Java");
-
-    private EntityManager		entityManager	       = ENTITY_MANAGER_FACTORY.createEntityManager();
-
-    public TableListBean() {}
     
-    public Set<TeamGroupSummaryData> getTableList()
+    private TeamQuery teamQuery;
+    private MatchQuery matchQuery;
+
+    public TableListBean() { this.teamQuery = new TeamQuery(); this.matchQuery = new MatchQuery(); }
+    
+    public List<TeamGroupSummaryData> getTableList()
     {
-	SortedSet<TeamGroupSummaryData> tableList = new TreeSet<TeamGroupSummaryData>(new TableListComparator());
+	SortedSet<TeamGroupSummaryData> tableSortedSet = new TreeSet<TeamGroupSummaryData>(new TableListComparator());
 	
-	for (Team team : this.getAllTeams())
+	for (Team team : this.teamQuery.getAllTeams())
 	{
-	    tableList.add(this.getTeamGroupSummaryData(team));
+	    tableSortedSet.add(this.getTeamGroupSummaryData(team));
 	}
 	
-	return tableList;
+	return new ArrayList<TeamGroupSummaryData>(tableSortedSet);
     }
     
     private TeamGroupSummaryData getTeamGroupSummaryData(Team team) {
@@ -52,12 +49,12 @@ public class TableListBean {
 	
 	int id = team.getId();
 
-	Collection<Match> matchCollection = this.getTeamPlayedMatches(id);
+	List<Match> matchList = this.matchQuery.getTeamPlayedMatches(id);
 
 	int points = 0, goalPlus = 0, goalMinus = 0, gameAmount = 0;
 	boolean isHome = false;
 
-	for (Match match : matchCollection) {
+	for (Match match : matchList) {
 	    if (match.getHomeTeam().getId() == id) {
 		isHome = true;
 	    } else {
@@ -90,60 +87,4 @@ public class TableListBean {
 
 	return teamGroupSummaryData;
     }
-
-//    private TeamGroupSummaryData getTeamGroupSummaryData(int id) {
-//	return this.getTeamGroupSummaryData(this.getTeam(id));
-//    }
-    
-//    private Collection<Team> getAllTeams()
-//    {
-//	TypedQuery<Team> query = this.entityManager.createQuery("SELECT t FROM Team t", Team.class);
-//
-//	return query.getResultList();
-//    }
-    
-    public List<Team> getAllTeams()
-    {
-	TypedQuery<Team> query = this.entityManager.createQuery("SELECT t FROM Team t", Team.class);
-
-	return query.getResultList();
-    }
-
-    private Team getTeam(int id) {
-	if (id < 1) {
-	    throw new IllegalArgumentException("Id must not lower than 1");
-	}
-
-	TypedQuery<Team> query = this.entityManager.createQuery("SELECT t FROM Team t WHERE t.id = :id)", Team.class);
-	query.setParameter("id", id);
-
-	return query.getSingleResult();
-    }
-
-    private Collection<Match> getTeamMatches(int id) {
-	if (id < 1) {
-	    throw new IllegalArgumentException("Id must not lower than 1");
-	}
-	// Exception, wenn ID nicht gefunden.
-
-	TypedQuery<Match> query = this.entityManager.createQuery(
-		"SELECT m FROM Team t, Match m WHERE t.id = :id AND (m.homeTeam.id = :id OR m.guestTeam.id = :id)", Match.class);
-	query.setParameter("id", id);
-
-	return query.getResultList();
-    }
-
-    private Collection<Match> getTeamPlayedMatches(int id) {
-	if (id < 1) {
-	    throw new IllegalArgumentException("Id must not lower than 1");
-	}
-
-	TypedQuery<Match> query = this.entityManager.createQuery(
-		"SELECT m FROM Team t, Match m WHERE t.id = :id AND (m.homeTeam.id = :id OR m.guestTeam.id = :id) AND (m.finalScore IS NOT NULL)",
-		Match.class);
-	query.setParameter("id", id);
-
-	return query.getResultList();
-    }
-
 }

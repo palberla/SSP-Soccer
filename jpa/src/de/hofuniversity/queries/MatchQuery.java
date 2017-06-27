@@ -43,7 +43,7 @@ public class MatchQuery {
     
     public List<Match> getAllMatchesForGroupId(int groupId)
     {
-	TypedQuery<Match> query = this.entityManager.createQuery("SELECT m FROM Match m WHERE m.groupId = :id)", Match.class);
+	TypedQuery<Match> query = this.entityManager.createQuery("SELECT m FROM Match m WHERE m.groupId = :id", Match.class);
 	query.setParameter("id", groupId);
 
 	return query.getResultList();
