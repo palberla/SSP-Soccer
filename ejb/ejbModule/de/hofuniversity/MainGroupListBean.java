@@ -33,7 +33,7 @@ public class MainGroupListBean {
 	// teamGroupSummaryData.getGoalMinus())
 	//
 	// );
-	Collection<MatchGroupSummaryData> matchGroupList = groupListBean.getMatchGroupSummaryDataList(1);
+	Collection<MatchGroupSummaryData> matchGroupList = groupListBean.getMatchGroupSummaryDataList(34);
 	System.out.printf("%30s\t%20s\t%30s","Heimmannschaf", "Ergebnis", "Gastmannschaft");
 	System.out.println();
 	for (MatchGroupSummaryData mgsd : matchGroupList) {

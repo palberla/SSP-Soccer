@@ -1,32 +1,29 @@
 package de.hofuniversity.bean;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.TypedQuery;
+import javax.ejb.Stateless;
 
 import de.hofuniversity.bean.grouplist.DefaultMatchGroupSummaryData;
 import de.hofuniversity.bean.grouplist.MatchGroupSummaryData;
 import de.hofuniversity.core.Match;
 import de.hofuniversity.core.Result;
 import de.hofuniversity.core.Team;
+import de.hofuniversity.queries.MatchQuery;
 
+@Stateless
 public class GroupListBean {
-
-    private static EntityManagerFactory	ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory("SSP-Soccer-Java");
-
-    private EntityManager entityManager = ENTITY_MANAGER_FACTORY.createEntityManager();
-
-    public GroupListBean() {}
     
-    public Collection<MatchGroupSummaryData> getMatchGroupSummaryDataList(int groupId)
+    private MatchQuery matchQuery;
+
+    public GroupListBean() { this.matchQuery = new MatchQuery(); }
+    
+    public List<MatchGroupSummaryData> getMatchGroupSummaryDataList(int groupId)
     {
-	Collection<MatchGroupSummaryData> matchGroupSummaryList = new ArrayList<MatchGroupSummaryData>();
+	List<MatchGroupSummaryData> matchGroupSummaryList = new ArrayList<MatchGroupSummaryData>();
 	
-	for (Match match : this.getAllMatchesForId(groupId))
+	for (Match match : this.matchQuery.getAllMatchesForGroupId(groupId))
 	{
 	    matchGroupSummaryList.add(this.getMatchGroupSummaryData(match));
 	    
@@ -68,15 +65,5 @@ public class GroupListBean {
 	dmgsd.setGuestTeamIconUrl(guestTeam.getIconURL());
 	
 	return dmgsd;
-    }
-
-    
-    
-    private Collection<Match> getAllMatchesForId(int groupId)
-    {
-	TypedQuery<Match> query = this.entityManager.createQuery("SELECT m FROM Match m WHERE m.groupId = :id)", Match.class);
-	query.setParameter("id", groupId);
-
-	return query.getResultList();
     }
 }
