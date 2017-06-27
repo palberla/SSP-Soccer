@@ -32,7 +32,7 @@ public class MainTableListBean {
 //		);
 	Collection<TeamGroupSummaryData> teamTableList = teamBean.getTableList();
 	int index = 0;
-	System.out.println("Platz\tName\t\t\tSpiele\t+Tore\t-Tore\tPunkte");
+	System.out.printf("%5s\t%35s\t%5s\t%5s\t%5s\t%5s","Platz", "Name", "Spiele", "+Tore", "-Tore", "Punkte");
 	for (TeamGroupSummaryData tgsd : teamTableList)
 	{
 	    printlnTeamForPlace(tgsd, ++index);
