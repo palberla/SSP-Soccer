@@ -6,8 +6,6 @@ import java.util.SortedSet;
 import java.util.TreeSet;
 
 import javax.ejb.Stateless;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 
 import de.hofuniversity.bean.tablelist.DefaultTeamGroupSummaryData;
 import de.hofuniversity.bean.tablelist.TableListComparator;
@@ -19,8 +17,6 @@ import de.hofuniversity.queries.MatchQuery;
 import de.hofuniversity.queries.TeamQuery;
 
 //@Transactional
-@ManagedBean
-@ViewScoped
 @Stateless
 public class TableListBean {
     
