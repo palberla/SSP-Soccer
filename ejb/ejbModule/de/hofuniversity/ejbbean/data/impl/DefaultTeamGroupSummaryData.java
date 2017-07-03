@@ -1,4 +1,6 @@
-package de.hofuniversity.bean.tablelist;
+package de.hofuniversity.ejbbean.data.impl;
+
+import de.hofuniversity.ejbbean.data.TeamGroupSummaryData;
 
 public class DefaultTeamGroupSummaryData implements TeamGroupSummaryData {
     

@@ -2,8 +2,8 @@ package de.hofuniversity;
 
 import java.util.Collection;
 
-import de.hofuniversity.bean.GroupListBean;
-import de.hofuniversity.bean.grouplist.MatchGroupSummaryData;
+import de.hofuniversity.ejbbean.bean.impl.GroupListBean;
+import de.hofuniversity.ejbbean.data.MatchGroupSummaryData;
 
 public class MainGroupListBean {
 

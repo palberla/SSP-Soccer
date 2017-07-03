@@ -1,8 +1,10 @@
-package de.hofuniversity.bean.matchdetail;
+package de.hofuniversity.ejbbean.data;
 
 import java.util.Collection;
 
-public interface MatchDetail {
+import de.hofuniversity.ejbbean.data.impl.MatchDetailGoal;
+
+public interface MatchDetailSummaryData {
 
     public String getHomeTeamName();
     

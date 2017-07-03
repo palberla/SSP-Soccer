@@ -1,29 +1,40 @@
-package de.hofuniversity.bean;
+package de.hofuniversity.ejbbean.bean.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
 
-import de.hofuniversity.bean.grouplist.DefaultMatchGroupSummaryData;
-import de.hofuniversity.bean.grouplist.MatchGroupSummaryData;
 import de.hofuniversity.core.Match;
 import de.hofuniversity.core.Result;
 import de.hofuniversity.core.Team;
+import de.hofuniversity.ejbbean.bean.GroupListRemote;
+import de.hofuniversity.ejbbean.data.MatchGroupSummaryData;
+import de.hofuniversity.ejbbean.data.impl.DefaultMatchGroupSummaryData;
 import de.hofuniversity.queries.MatchQuery;
 
-@Stateless
-public class GroupListBean {
+@Stateless(name = GroupListRemote.MAPPED_NAME, mappedName = GroupListRemote.MAPPED_NAME)
+public class GroupListBean implements GroupListRemote {
     
-    private MatchQuery matchQuery;
+    private MatchQuery matchQuery = null;
 
-    public GroupListBean() { this.matchQuery = new MatchQuery(); }
+    public GroupListBean() {}
+    
+    private MatchQuery getMatchQuery()
+    {
+	if (this.matchQuery == null)
+	{
+	    this.matchQuery = new MatchQuery(); 
+	}
+	
+	return this.matchQuery;
+    }
     
     public List<MatchGroupSummaryData> getMatchGroupSummaryDataList(int groupId)
     {
 	List<MatchGroupSummaryData> matchGroupSummaryList = new ArrayList<MatchGroupSummaryData>();
 	
-	for (Match match : this.matchQuery.getAllMatchesForGroupId(groupId))
+	for (Match match : this.getMatchQuery().getAllMatchesForGroupId(groupId))
 	{
 	    matchGroupSummaryList.add(this.getMatchGroupSummaryData(match));
 	    

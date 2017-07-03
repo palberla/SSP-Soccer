@@ -1,4 +1,4 @@
-package de.hofuniversity.bean;
+package de.hofuniversity.ejbbean.bean.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,29 +7,51 @@ import java.util.TreeSet;
 
 import javax.ejb.Stateless;
 
-import de.hofuniversity.bean.tablelist.DefaultTeamGroupSummaryData;
-import de.hofuniversity.bean.tablelist.TableListComparator;
-import de.hofuniversity.bean.tablelist.TeamGroupSummaryData;
 import de.hofuniversity.core.Match;
 import de.hofuniversity.core.Result;
 import de.hofuniversity.core.Team;
+import de.hofuniversity.ejbbean.bean.TableListRemote;
+import de.hofuniversity.ejbbean.data.TeamGroupSummaryData;
+import de.hofuniversity.ejbbean.data.comparator.TableListComparator;
+import de.hofuniversity.ejbbean.data.impl.DefaultTeamGroupSummaryData;
 import de.hofuniversity.queries.MatchQuery;
 import de.hofuniversity.queries.TeamQuery;
 
-//@Transactional
-@Stateless
-public class TableListBean {
-    
-    private TeamQuery teamQuery;
-    private MatchQuery matchQuery;
 
-    public TableListBean() { this.teamQuery = new TeamQuery(); this.matchQuery = new MatchQuery(); }
+@Stateless(name = TableListRemote.MAPPED_NAME, mappedName = TableListRemote.MAPPED_NAME)
+public class TableListBean implements TableListRemote {
+    
+    
+    private TeamQuery teamQuery = null;
+    private MatchQuery matchQuery = null;
+
+    public TableListBean() {}
+    
+    private TeamQuery getTeamQuery()
+    {
+	if (this.teamQuery == null)
+	{
+	    this.teamQuery = new TeamQuery(); 
+	}
+	
+	return this.teamQuery;
+    }
+    
+    private MatchQuery getMatchQuery()
+    {
+	if (this.matchQuery == null)
+	{
+	    this.matchQuery = new MatchQuery(); 
+	}
+	
+	return this.matchQuery;
+    }
     
     public List<TeamGroupSummaryData> getTableList()
     {
 	SortedSet<TeamGroupSummaryData> tableSortedSet = new TreeSet<TeamGroupSummaryData>(new TableListComparator());
 	
-	for (Team team : this.teamQuery.getAllTeams())
+	for (Team team : this.getTeamQuery().getAllTeams())
 	{
 	    tableSortedSet.add(this.getTeamGroupSummaryData(team));
 	}
@@ -45,7 +67,7 @@ public class TableListBean {
 	
 	int id = team.getId();
 
-	List<Match> matchList = this.matchQuery.getTeamPlayedMatches(id);
+	List<Match> matchList = this.getMatchQuery().getTeamPlayedMatches(id);
 
 	int points = 0, goalPlus = 0, goalMinus = 0, gameAmount = 0;
 	boolean isHome = false;
