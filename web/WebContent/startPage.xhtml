@@ -16,7 +16,7 @@ height: 50px;
 <body> 
 <!-- -->
 <div></div>
-<h:dataTable rowClasses="row-even, row-odd" value="#{webTableBean.tableList()}" var="team">
+<h:dataTable rowClasses="row-even, row-odd" value="#{tableListWebBean.TGSDTableList}" var="team">
 	<h:column>
 		<f:facet name="header">Teams</f:facet>
 		<h:graphicImage url="#{team.teamIconUrl}" />

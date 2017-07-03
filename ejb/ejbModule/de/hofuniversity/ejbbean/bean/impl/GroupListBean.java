@@ -12,22 +12,27 @@ import de.hofuniversity.ejbbean.bean.GroupListRemote;
 import de.hofuniversity.ejbbean.data.MatchGroupSummaryData;
 import de.hofuniversity.ejbbean.data.impl.DefaultMatchGroupSummaryData;
 import de.hofuniversity.queries.MatchQuery;
+import de.hofuniversity.queries.QueryCache;
 
 @Stateless(name = GroupListRemote.MAPPED_NAME, mappedName = GroupListRemote.MAPPED_NAME)
 public class GroupListBean implements GroupListRemote {
     
-    private MatchQuery matchQuery = null;
-
+    private QueryCache queryCache;
+    
     public GroupListBean() {}
+    
+    private QueryCache getQueryCache()
+    {
+	if (this.queryCache == null)
+	{
+	    this.queryCache = QueryCache.getQueryCache();
+	}
+	return this.queryCache;
+    }
     
     private MatchQuery getMatchQuery()
     {
-	if (this.matchQuery == null)
-	{
-	    this.matchQuery = new MatchQuery(); 
-	}
-	
-	return this.matchQuery;
+	return this.getQueryCache().getMatchQuery();
     }
     
     public List<MatchGroupSummaryData> getMatchGroupSummaryDataList(int groupId)
