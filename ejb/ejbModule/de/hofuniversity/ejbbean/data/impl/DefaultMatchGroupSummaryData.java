@@ -1,4 +1,6 @@
-package de.hofuniversity.bean.grouplist;
+package de.hofuniversity.ejbbean.data.impl;
+
+import de.hofuniversity.ejbbean.data.MatchGroupSummaryData;
 
 public class DefaultMatchGroupSummaryData implements MatchGroupSummaryData {
     

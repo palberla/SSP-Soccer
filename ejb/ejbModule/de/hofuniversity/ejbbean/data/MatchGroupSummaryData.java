@@ -1,4 +1,4 @@
-package de.hofuniversity.bean.grouplist;
+package de.hofuniversity.ejbbean.data;
 
 public interface MatchGroupSummaryData {
     

@@ -1,10 +1,8 @@
-package de.hofuniversity.bean.teamdetail;
+package de.hofuniversity.ejbbean.data;
 
 import java.util.Collection;
 
-import de.hofuniversity.bean.grouplist.MatchGroupSummaryData;
-
-public interface TeamDetail {
+public interface TeamDetailSummaryData {
     
     public String getTeamName();
     

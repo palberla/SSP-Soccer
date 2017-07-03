@@ -1,4 +1,6 @@
-package de.hofuniversity.bean.goalgetterlist;
+package de.hofuniversity.ejbbean.data.impl;
+
+import de.hofuniversity.ejbbean.data.GoalGetterSummaryData;
 
 public class DefaultGoalGetterSummaryData implements GoalGetterSummaryData {
     

@@ -1,4 +1,4 @@
-package de.hofuniversity.bean.tablelist;
+package de.hofuniversity.ejbbean.data;
 
 public interface TeamGroupSummaryData {
 

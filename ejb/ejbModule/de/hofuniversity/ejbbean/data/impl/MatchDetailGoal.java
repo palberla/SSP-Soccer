@@ -1,4 +1,4 @@
-package de.hofuniversity.bean.matchdetail;
+package de.hofuniversity.ejbbean.data.impl;
 
 public interface MatchDetailGoal {
     
