@@ -1,4 +1,4 @@
-package de.hofuniversity.bean.goalgetterlist;
+package de.hofuniversity.ejbbean.data;
 
 public interface GoalGetterSummaryData {
     

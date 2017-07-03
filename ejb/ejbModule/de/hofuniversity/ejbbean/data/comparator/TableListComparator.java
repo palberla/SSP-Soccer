@@ -1,6 +1,8 @@
-package de.hofuniversity.bean.tablelist;
+package de.hofuniversity.ejbbean.data.comparator;
 
 import java.util.Comparator;
+
+import de.hofuniversity.ejbbean.data.TeamGroupSummaryData;
 
 public class TableListComparator implements Comparator<TeamGroupSummaryData> {
 
