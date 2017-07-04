@@ -1,6 +1,6 @@
 package de.hofuniversity.ejbbean.bean;
 
-import java.util.Collection;
+import java.util.List;
 
 import javax.ejb.Remote;
 
@@ -10,5 +10,5 @@ import de.hofuniversity.ejbbean.data.GoalGetterSummaryData;
 public interface GoalGetterListRemote {
     public final String MAPPED_NAME = "ejb/GoalGetterList";
     
-    public Collection<GoalGetterSummaryData> getGoalGetterCollection();
+    public List<GoalGetterSummaryData> getGoalGetterList();
 }

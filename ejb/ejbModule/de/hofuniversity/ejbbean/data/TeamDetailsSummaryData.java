@@ -1,8 +1,8 @@
 package de.hofuniversity.ejbbean.data;
 
-import java.util.Collection;
+import java.util.List;
 
-public interface TeamDetailSummaryData {
+public interface TeamDetailsSummaryData {
     
     public String getTeamName();
     
@@ -22,8 +22,8 @@ public interface TeamDetailSummaryData {
     
     public String getStadiumOutsideURL();
     
-    public Collection<MatchGroupSummaryData> getTeamMatches();
+    public List<MatchGroupSummaryData> getTeamMatches();
     
-    public Collection<String> getTeamPlayerList();
+    public List<String> getTeamPlayerList();
 
 }
