@@ -3,6 +3,7 @@ package de.hofuniversity.core;
  * 
  */
 
+import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,7 +17,7 @@ import de.hofuniversity.util.ExceptionText;
  */
 @Entity
 @Table(name="t_result")
-public class Result extends Identifier
+public class Result extends Identifier implements Serializable
 {
     	@Column(name="c_points_home", nullable=false)
 	private int pointsHome;

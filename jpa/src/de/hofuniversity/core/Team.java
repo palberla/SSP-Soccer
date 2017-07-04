@@ -1,5 +1,6 @@
 package de.hofuniversity.core;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -20,7 +21,7 @@ import de.hofuniversity.util.ExceptionText;
  */
 @Entity
 @Table(name = "t_team")
-public class Team extends Named implements ConnectToPlayer {
+public class Team extends Named implements ConnectToPlayer, Serializable {
     @Transient
     private PlayerNameEqualizer	playerNameEqualizer;
 
