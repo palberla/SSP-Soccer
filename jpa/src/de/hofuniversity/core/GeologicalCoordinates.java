@@ -1,10 +1,12 @@
 package de.hofuniversity.core;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class GeologicalCoordinates
+public class GeologicalCoordinates implements Serializable
 {
     	@Column(name="c_longitude", nullable=false)
     	private double longitude;

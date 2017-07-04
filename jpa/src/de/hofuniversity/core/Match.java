@@ -1,4 +1,5 @@
 package de.hofuniversity.core;
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -33,7 +34,7 @@ import de.hofuniversity.util.comparator.GoalComparator;
  */
 @Entity
 @Table(name="t_match")
-public class Match extends Identifier implements ConnectToGoal, ConnectToGuestTeam, ConnectToHomeTeam
+public class Match extends Identifier implements ConnectToGoal, ConnectToGuestTeam, ConnectToHomeTeam, Serializable
 {
     	@Column(name="c_group_id", nullable=false)
 	private int groupId; // Spieltag

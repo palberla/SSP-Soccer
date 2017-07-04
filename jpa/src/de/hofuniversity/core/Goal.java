@@ -3,6 +3,8 @@ package de.hofuniversity.core;
  * 
  */
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -20,7 +22,7 @@ import de.hofuniversity.util.ExceptionText;
 
 @Entity
 @Table(name="t_goal")
-public class Goal extends Identifier implements ConnectToPlayer
+public class Goal extends Identifier implements ConnectToPlayer, Serializable
 {	
     	@Column(name="c_points_home", nullable=false)
 	private int pointsHome = -1;
