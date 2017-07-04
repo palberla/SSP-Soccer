@@ -1,6 +1,6 @@
-package de.hofuniversity.ejbbean.data.impl;
+package de.hofuniversity.ejbbean.data;
 
-public interface MatchDetailGoal {
+public interface MatchDetailsGoalSummaryData {
     
     public int getHomeScore();
     
@@ -9,5 +9,4 @@ public interface MatchDetailGoal {
     public String getComment();
     
     public String getGoalGetterName();
-
 }
