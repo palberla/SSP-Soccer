@@ -1,5 +1,7 @@
 package de.hofuniversity.core;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -15,7 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="t_stadium")
-public class Stadium extends Named
+public class Stadium extends Named implements Serializable
 {	
     	@Column(name="c_capacity", nullable=false)
     	private int viewers;

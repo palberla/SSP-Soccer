@@ -1,4 +1,5 @@
 package de.hofuniversity.core;
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -17,7 +18,7 @@ import de.hofuniversity.util.ExceptionText;
  */
 @Entity
 @Table(name="t_player")
-public class Player extends Named
+public class Player extends Named implements Serializable
 {
     	@ManyToOne(targetEntity=Team.class, fetch=FetchType.LAZY)
     	@JoinColumn(name="c_team_id", referencedColumnName="c_id")
