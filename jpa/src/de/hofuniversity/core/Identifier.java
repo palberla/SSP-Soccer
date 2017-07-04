@@ -1,5 +1,7 @@
 package de.hofuniversity.core;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 import de.hofuniversity.util.ExceptionText;
@@ -10,7 +12,7 @@ import de.hofuniversity.util.ExceptionText;
  */
 
 @MappedSuperclass
-public abstract class Identifier
+public abstract class Identifier implements Serializable
 {
     	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

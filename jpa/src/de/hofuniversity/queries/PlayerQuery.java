@@ -7,15 +7,15 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-import de.hofuniversity.core.Team;
+import de.hofuniversity.core.Player;
 
-public class TeamQuery {
+public class PlayerQuery {
 
     private EntityManagerFactory EntityManagerFactory = null;
 
     private EntityManager entityManager = null;
     
-    protected TeamQuery() {}
+    protected PlayerQuery() {}
     
     public EntityManager getEntityManager()
     {
@@ -35,21 +35,16 @@ public class TeamQuery {
 	}
     }
     
-    public List<Team> getAllTeams()
+    public Player getPlayer(int playerId)
     {
-	TypedQuery<Team> query = this.getEntityManager().createQuery("SELECT t FROM Team t", Team.class);
-
-	return query.getResultList();
-    }
-    
-    public Team getTeam(int id) {
-	if (id < 1) {
-	    throw new IllegalArgumentException("Id must not lower than 1");
-	}
-
-	TypedQuery<Team> query = this.getEntityManager().createQuery("SELECT t FROM Team t WHERE t.id = :id", Team.class);
-	query.setParameter("id", id);
+	TypedQuery<Player> query = this.getEntityManager().createQuery("SELECT p FROM Player p WHERE p.id = :id", Player.class);
+	query.setParameter("id", playerId);
 
 	return query.getSingleResult();
+    }
+    
+    public List<Object[]> getGoalGetterDataList()
+    {
+	return this.getEntityManager().createQuery("SELECT p, COUNT(g.player.id) AS goalCount FROM Goal g, Player p WHERE g.player.id = p.id GROUP BY g.player.id ORDER BY goalCount DESC").getResultList();
     }
 }

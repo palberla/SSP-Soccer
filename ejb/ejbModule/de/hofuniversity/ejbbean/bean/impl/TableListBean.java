@@ -15,36 +15,34 @@ import de.hofuniversity.ejbbean.data.TeamGroupSummaryData;
 import de.hofuniversity.ejbbean.data.comparator.TableListComparator;
 import de.hofuniversity.ejbbean.data.impl.DefaultTeamGroupSummaryData;
 import de.hofuniversity.queries.MatchQuery;
+import de.hofuniversity.queries.QueryCache;
 import de.hofuniversity.queries.TeamQuery;
 
 
 @Stateless(name = TableListRemote.MAPPED_NAME, mappedName = TableListRemote.MAPPED_NAME)
 public class TableListBean implements TableListRemote {
     
+    private QueryCache queryCache;
     
-    private TeamQuery teamQuery = null;
-    private MatchQuery matchQuery = null;
-
     public TableListBean() {}
+    
+    private QueryCache getQueryCache()
+    {
+	if (this.queryCache == null)
+	{
+	    this.queryCache = QueryCache.getQueryCache();
+	}
+	return this.queryCache;
+    }
     
     private TeamQuery getTeamQuery()
     {
-	if (this.teamQuery == null)
-	{
-	    this.teamQuery = new TeamQuery(); 
-	}
-	
-	return this.teamQuery;
+	return this.getQueryCache().getTeamQuery();
     }
     
     private MatchQuery getMatchQuery()
     {
-	if (this.matchQuery == null)
-	{
-	    this.matchQuery = new MatchQuery(); 
-	}
-	
-	return this.matchQuery;
+	return this.getQueryCache().getMatchQuery();
     }
     
     public List<TeamGroupSummaryData> getTableList()

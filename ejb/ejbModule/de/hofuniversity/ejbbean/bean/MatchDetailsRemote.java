@@ -2,11 +2,11 @@ package de.hofuniversity.ejbbean.bean;
 
 import javax.ejb.Remote;
 
-import de.hofuniversity.ejbbean.data.MatchDetailSummaryData;
+import de.hofuniversity.ejbbean.data.MatchDetailsSummaryData;
 
 @Remote
 public interface MatchDetailsRemote {
     public final String MAPPED_NAME = "ejb/MatchDetails";
     
-    public MatchDetailSummaryData getMatchDetail();
+    public MatchDetailsSummaryData getMatchDetails(int matchId);
 }

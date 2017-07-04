@@ -1,10 +1,8 @@
 package de.hofuniversity.ejbbean.data;
 
-import java.util.Collection;
+import java.util.List;
 
-import de.hofuniversity.ejbbean.data.impl.MatchDetailGoal;
-
-public interface MatchDetailSummaryData {
+public interface MatchDetailsSummaryData {
 
     public String getHomeTeamName();
     
@@ -12,7 +10,7 @@ public interface MatchDetailSummaryData {
     
     public String getGuestTeamName();
     
-    public String getGuestIconURL();
+    public String getGuestTeamIconURL();
     
     public int getFinalHomeScore();
     
@@ -36,5 +34,5 @@ public interface MatchDetailSummaryData {
     
     public String getStadiumOutsideURL();
     
-    public Collection<MatchDetailGoal> getGoalList();
+    public List<MatchDetailsGoalSummaryData> getGoalList();
 }

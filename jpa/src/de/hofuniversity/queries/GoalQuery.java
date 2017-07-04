@@ -7,15 +7,14 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-import de.hofuniversity.core.Team;
+import de.hofuniversity.core.Goal;
 
-public class TeamQuery {
-
+public class GoalQuery {
     private EntityManagerFactory EntityManagerFactory = null;
 
     private EntityManager entityManager = null;
     
-    protected TeamQuery() {}
+    protected GoalQuery() {}
     
     public EntityManager getEntityManager()
     {
@@ -35,21 +34,12 @@ public class TeamQuery {
 	}
     }
     
-    public List<Team> getAllTeams()
+    public List<Goal> getGoalListForMatchId(int matchId)
     {
-	TypedQuery<Team> query = this.getEntityManager().createQuery("SELECT t FROM Team t", Team.class);
+	TypedQuery<Goal> query = this.getEntityManager().createQuery(
+		"Select g FROM Goal g WHERE g.match.id = :id", Goal.class);
+	query.setParameter("id", matchId);
 
 	return query.getResultList();
-    }
-    
-    public Team getTeam(int id) {
-	if (id < 1) {
-	    throw new IllegalArgumentException("Id must not lower than 1");
-	}
-
-	TypedQuery<Team> query = this.getEntityManager().createQuery("SELECT t FROM Team t WHERE t.id = :id", Team.class);
-	query.setParameter("id", id);
-
-	return query.getSingleResult();
     }
 }
