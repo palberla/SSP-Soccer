@@ -3,10 +3,10 @@ package de.hofuniversity.ejbbean.data.impl;
 import de.hofuniversity.ejbbean.data.MatchGroupSummaryData;
 
 public class DefaultMatchGroupSummaryData implements MatchGroupSummaryData {
-    
+
     private String homeTeamName, homeTeamIconUrl, guestTeamName, guestTeamIconUrl;
-    private int homeTeamFinalPoints, homeTeamHalfPoints, guestTeamFinalPoints, guestTeamHalfPoints;
-    
+    private String homeTeamFinalPoints, homeTeamHalfPoints, guestTeamFinalPoints, guestTeamHalfPoints;
+
     @Override
     public String getHomeTeamName() {
 	return this.homeTeamName;
@@ -28,54 +28,62 @@ public class DefaultMatchGroupSummaryData implements MatchGroupSummaryData {
     }
 
     @Override
-    public int getHomeTeamFinalPoints() {
+    public String getHomeTeamFinalPoints() {
 	return this.homeTeamFinalPoints;
     }
 
     @Override
-    public int getGuestTeamFinalPoints() {
+    public String getGuestTeamFinalPoints() {
 	return this.guestTeamFinalPoints;
     }
 
     @Override
-    public int getHomeTeamHalfPoints() {
+    public String getHomeTeamHalfPoints() {
 	return this.homeTeamHalfPoints;
     }
 
     @Override
-    public int getGuestTeamHalfPoints() {
+    public String getGuestTeamHalfPoints() {
 	return this.guestTeamHalfPoints;
     }
 
     public void setHomeTeamName(String homeTeamName) {
-        this.homeTeamName = homeTeamName;
+	this.homeTeamName = homeTeamName;
     }
 
     public void setHomeTeamIconUrl(String homeTeamIconUrl) {
-        this.homeTeamIconUrl = homeTeamIconUrl;
+	this.homeTeamIconUrl = homeTeamIconUrl;
     }
 
     public void setGuestTeamName(String guestTeamName) {
-        this.guestTeamName = guestTeamName;
+	this.guestTeamName = guestTeamName;
     }
 
     public void setGuestTeamIconUrl(String guestTeamIconUrl) {
-        this.guestTeamIconUrl = guestTeamIconUrl;
+	this.guestTeamIconUrl = guestTeamIconUrl;
+    }
+
+    private String getStringOfScorePoints(int points) {
+	if (points < 0) {
+	    return "-";
+	} else {
+	    return String.valueOf(points);
+	}
     }
 
     public void setHomeTeamFinalPoints(int homeTeamFinalPoints) {
-        this.homeTeamFinalPoints = homeTeamFinalPoints;
+	this.homeTeamFinalPoints = getStringOfScorePoints(homeTeamFinalPoints);
     }
 
     public void setHomeTeamHalfPoints(int homeTeamHalfPoints) {
-        this.homeTeamHalfPoints = homeTeamHalfPoints;
+	this.homeTeamHalfPoints = getStringOfScorePoints(homeTeamHalfPoints);
     }
 
     public void setGuestTeamFinalPoints(int guestTeamFinalPoints) {
-        this.guestTeamFinalPoints = guestTeamFinalPoints;
+	this.guestTeamFinalPoints = getStringOfScorePoints(guestTeamFinalPoints);
     }
 
     public void setGuestTeamHalfPoints(int guestTeamHalfPoints) {
-        this.guestTeamHalfPoints = guestTeamHalfPoints;
+	this.guestTeamHalfPoints = getStringOfScorePoints(guestTeamHalfPoints);
     }
 }
