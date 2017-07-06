@@ -10,5 +10,7 @@ public interface TeamDetailsRemote {
     public final String MAPPED_NAME = "ejb/TeamDetails";
     
     public TeamDetailsSummaryData getTeamDetails(int id);
+    
+    public TeamDetailsSummaryData getTeamDetailsForIconURL(String iconURL);
 
 }

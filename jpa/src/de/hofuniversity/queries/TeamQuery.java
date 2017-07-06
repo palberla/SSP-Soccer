@@ -52,4 +52,11 @@ public class TeamQuery {
 
 	return query.getSingleResult();
     }
+
+    public Team getTeam(String iconURL) {
+	TypedQuery<Team> query = this.getEntityManager().createQuery("SELECT t FROM Team t WHERE t.iconURL = :iconUrl", Team.class);
+	query.setParameter("iconUrl", iconURL);
+
+	return query.getSingleResult();
+    }
 }
