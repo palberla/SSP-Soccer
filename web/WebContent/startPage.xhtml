@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en"    xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet"> </link>
+    
+    <style>
+		.column1 {width: 450px}
+		.column2 {width: 75px}
+		.column3 {width: 75px}
+		.column4 {width: 75px}
+		.row {height: 45px}
+		body {background-image: url("Rasen_Background.jpg"); background-repeat: no-repeat; background-attachment: fixed;}
+	</style>
+  </head>
+  <body>
+  
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Bundesliga</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+       <!-- <li class="active"><a href="http://localhost:8080/SSP-Web//startPage.xhtml">Home<span class="sr-only">(current)</span></a></li> -->
+        <li><a href="http://localhost:8080/SSP-Web//startPage.xhtml">Home</a></li>
+        <li><a href="http://localhost:8080/SSP-Web//torschuetzen.xhtml">Torschützen</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spieltag <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="1" name="id"/>
+      			<h:outputText value="1. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="2" name="id"/>
+      			<h:outputText value="2. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="3" name="id"/>
+      			<h:outputText value="3. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="4" name="id"/>
+      			<h:outputText value="4. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="5" name="id"/>
+      			<h:outputText value="5. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="6" name="id"/>
+      			<h:outputText value="6. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="7" name="id"/>
+      			<h:outputText value="7. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="8" name="id"/>
+      			<h:outputText value="8. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="9" name="id"/>
+      			<h:outputText value="9. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="10" name="id"/>
+      			<h:outputText value="10. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="11" name="id"/>
+      			<h:outputText value="11. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="12" name="id"/>
+      			<h:outputText value="12. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="13" name="id"/>
+      			<h:outputText value="13. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="14" name="id"/>
+      			<h:outputText value="14. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="15" name="id"/>
+      			<h:outputText value="15. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="16" name="id"/>
+      			<h:outputText value="16. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="17" name="id"/>
+      			<h:outputText value="17. Spieltag" />
+      			</h:outputLink></li>
+            <li role="separator" class="divider"></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="18" name="id"/>
+      			<h:outputText value="18. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="19" name="id"/>
+      			<h:outputText value="19. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="20" name="id"/>
+      			<h:outputText value="20. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="21" name="id"/>
+      			<h:outputText value="21. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="22" name="id"/>
+      			<h:outputText value="22. Spieltag" />
+      			</h:outputLink></li>
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+      			<f:param value="23" name="id"/>
+      			<h:outputText value="23. Spieltag" />
+      			</h:outputLink></li>
+          </ul>
+        </li>
+                    <li class="dropdown">
+      	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vereine<span class="caret"></span></a>
+      	<ul class="dropdown-menu">
+      		  <li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="1" name="id"/>
+      			<h:outputText value="Hamburger SV" />
+      			</h:outputLink>
+      			</li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="2" name="id"/>
+      			<h:outputText value="FC Schalke 04" />
+      			</h:outputLink>
+      			</li>
+      		<li> <h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="3" name="id"/>
+      			<h:outputText value="Borussia Dortmund" />
+      			</h:outputLink>
+      			</li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="4" name="id"/>
+      			<h:outputText value="Bayer 04 Leverkusen" />
+      			</h:outputLink>
+      			</li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="5" name="id"/>
+      			<h:outputText value="Bayern München" />
+      			</h:outputLink>
+      			</li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="6" name="id"/>
+      			<h:outputText value="VfL Wolfsburg" />
+      			</h:outputLink>
+      			</li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="7" name="id"/>
+      			<h:outputText value="VfB Stuttgart" />
+      			</h:outputLink>
+      			</li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="8" name="id"/>
+      			<h:outputText value="Werder Bremen" />
+      			</h:outputLink>
+      			</li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="9" name="id"/>
+      			<h:outputText value="Borussia Mönchengladbach" />
+      			</h:outputLink></li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="10" name="id"/>
+      			<h:outputText value="Hannover 96" />
+      			</h:outputLink></li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="11" name="id"/>
+      			<h:outputText value="SC Freiburg" />
+      			</h:outputLink></li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="12" name="id"/>
+      			<h:outputText value="FC Augsburg" />
+      			</h:outputLink></li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="13" name="id"/>
+      			<h:outputText value="Eintracht Frankfurt" />
+      			</h:outputLink></li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="14" name="id"/>
+      			<h:outputText value="Fortuna Düsseldorf" />
+      			</h:outputLink></li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="15" name="id"/>
+      			<h:outputText value="1. FC Nürnberg" />
+      			</h:outputLink></li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="16" name="id"/>
+      			<h:outputText value="1. FSV Mainz 05" />
+      			</h:outputLink></li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="17" name="id"/>
+      			<h:outputText value="SpVgg Greuther Fürth" />
+      			</h:outputLink></li>
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      			<f:param value="18" name="id"/>
+      			<h:outputText value="TSG 1899 Hoffenheim" />
+      			</h:outputLink></li>
+      	</ul>
+      </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <form class="navbar-form">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="User"></input>
+          <input type="text" class="form-control" placeholder="Passwort"></input>
+        </div>
+        <button type="submit" class="btn btn-default">Login</button>
+      </form>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <h1 align="center">Bundesliga | Tabelle</h1>
+    <div align="center" style="background-color: #f2f2f2;">
+    <h:dataTable class="table-condensed table-striped" columnClasses="column1, column2, column3, column4" rowClasses="row" value="#{webTableBean.tableList}" var="team">
+	<h:column>
+		<h:graphicImage url="#{team.teamIconUrl}" />
+		<h:outputText value=" " />
+		<h:outputText value="#{team.teamName}" />
+	</h:column>
+	<h:column>
+		<h:outputText value="#{team.gameAmount}" />
+	</h:column>
+	<h:column>
+	<f:facet name="header">Spiele</f:facet>
+		<h:outputText value="#{team.goalPlus}" />
+		<h:outputText value=" : " />
+		<h:outputText value="#{team.goalMinus}" />
+	</h:column>
+	<h:column>
+		<f:facet name="header">Tore</f:facet>
+		<h:outputText value="#{team.points}" />
+	</h:column>
+		<h:column>
+		<f:facet name="header">Spiele</f:facet>
+	</h:column>
+</h:dataTable>
+ </div> 
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
