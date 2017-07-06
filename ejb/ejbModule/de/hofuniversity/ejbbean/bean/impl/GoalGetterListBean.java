@@ -23,7 +23,7 @@ public class GoalGetterListBean implements GoalGetterListRemote {
     {
 	if (this.queryCache == null)
 	{
-	    this.queryCache = QueryCache.getQueryCache();
+	    this.queryCache = QueryCache.getInstance();
 	}
 	return this.queryCache;
     }

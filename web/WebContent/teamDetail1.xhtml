@@ -13,12 +13,17 @@
     <link href="css/bootstrap.min.css" rel="stylesheet"> </link>
     
     <style>
-		.column1 {width: 450px}
-		.column2 {width: 75px}
-		.column3 {width: 75px}
-		.column4 {width: 75px}
+    	body {background-image: url("Rasen_Background.jpg"); background-repeat: no-repeat; background-attachment: fixed;}
+		.column1 {width: 200px; text-align: center}
+		.column2 {width: 20px}
+		.column3 {width: 100px; text-align: center}
+		.column4 {width: 20px}
+		.column5 {width: 200px; text-align: center}
 		.row {height: 45px}
-		body {background-image: url("Rasen_Background.jpg"); background-repeat: no-repeat; background-attachment: fixed;}
+		.teamHeader {font-size: larger; font: bolder;}
+		#leftContent {float: left; width: 30%; background-color: #f2f2f2; margin-left: 60px;}
+		#rightContent {float: right; width: 40%; background-color: #f2f2f2; margin-right: 40px;}
+		#footer {position: absolute; bottom: 0px; background-color: black; width: 80%; height: 80px;}
 	</style>
   </head>
   <body>
@@ -45,7 +50,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Spieltag <span class="caret"></span></a>
           <ul class="dropdown-menu">
-           <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
+            <li><h:outputLink value="http://localhost:8080/SSP-Web/matchDetail1.xhtml">
       			<f:param value="1" name="id"/>
       			<h:outputText value="1. Spieltag" />
       			</h:outputLink></li>
@@ -140,10 +145,10 @@
       			</h:outputLink></li>
           </ul>
         </li>
-                    <li class="dropdown">
+                <li class="dropdown">
       	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Vereine<span class="caret"></span></a>
       	<ul class="dropdown-menu">
-      		  <li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
+      		<li><h:outputLink value="http://localhost:8080/SSP-Web/teamDetail1.xhtml">
       			<f:param value="1" name="id"/>
       			<h:outputText value="Hamburger SV" />
       			</h:outputLink>
@@ -239,37 +244,60 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-    <h1 align="center">Bundesliga | Tabelle</h1>
-    <div align="center" style="background-color: #f2f2f2;">
-    <h:dataTable class="table-condensed table-striped" columnClasses="column1, column2, column3, column4" rowClasses="row" value="#{webTableBean.tableList}" var="team">
+<h1 align="center"> 
+<h:dataTable value="#{webTeamDetailBean.getTeamDetails(param['id'])}" var="team">
 	<h:column>
-		<h:graphicImage url="#{team.teamIconUrl}" />
-		<h:outputText value=" " />
 		<h:outputText value="#{team.teamName}" />
 	</h:column>
+</h:dataTable>
+</h1>
+<!-- Main div -->
+<div align="center">
+<!-- Left content -->
+<div id="leftContent">
+	<h:dataTable class="table-condensed table-striped" columnClasses="column1" rowClasses="row" value="#{webTeamDetailBean.getTeamDetails(param['id']).teamPlayerList}" var="team">
+		<h:column>
+		<f:facet name="header">Spieler</f:facet>
+			<h:outputText value="#{team.toString()}" />
+		</h:column>
+	</h:dataTable>
+</div>
+
+
+<!-- Right content -->
+<div id="rightContent">
+	<h:dataTable class="table-condensed table-striped" columnClasses="column1, column2, column3, column4, column5" rowClasses="row" value="#{webTeamDetailBean.getTeamDetails(param['id']).teamMatches}" var="match">
+		<h:column>
+		<h:outputText value="#{match.homeTeamName}" />
+	</h:column>
 	<h:column>
-		<h:outputText value="#{team.gameAmount}" />
+		<h:graphicImage url="#{match.homeTeamIconUrl}" />
 	</h:column>
 	<h:column>
 	<f:facet name="header">Spiele</f:facet>
-		<h:outputText value="#{team.goalPlus}" />
+		<h:outputText value="#{match.homeTeamFinalPoints}" />
 		<h:outputText value=" : " />
-		<h:outputText value="#{team.goalMinus}" />
+		<h:outputText value="#{match.guestTeamFinalPoints}" />
+		<h:outputText value=" (" />
+		<h:outputText value="#{match.homeTeamHalfPoints}" />
+		<h:outputText value=" : " />
+		<h:outputText value="#{match.guestTeamHalfPoints}" />
+		<h:outputText value=")" />
 	</h:column>
 	<h:column>
-		<f:facet name="header">Tore</f:facet>
-		<h:outputText value="#{team.points}" />
+		<h:graphicImage value="#{match.guestTeamIconUrl}" />
 	</h:column>
-		<h:column>
-		<f:facet name="header">Spiele</f:facet>
+	<h:column>
+		<h:outputText value="#{match.guestTeamName}" />	
 	</h:column>
-</h:dataTable>
- </div> 
+	</h:dataTable>
+</div>
+<div id="footer">
 
+</div>	
+	
 
-
-
-
+</div>
 
 
 

@@ -9,25 +9,34 @@ import de.hofuniversity.ejbbean.data.MatchDetailsSummaryData;
 
 public class DefaultMatchDetailsSummaryData implements MatchDetailsSummaryData {
     
-    private int finalHomeScore, finalGuestScore, halfHomeScore, halfGuestScore, stadiumCapacity;;
+    private int stadiumCapacity;
     private String homeTeamName, homeTeamIconURL, guestTeamName, guestTeamIconURL, 
     		stadiumName, stadiumAdress, stadiumInsideURL, stadiumOutsideURL;
     private double longitude, latitude;
     private List<MatchDetailsGoalSummaryData> goalList;
+    private String finalHomeScore, finalGuestScore, halfHomeScore, halfGuestScore;
     
     public DefaultMatchDetailsSummaryData() {}
     
+    private String getStringOfScorePoints(int points) {
+	if (points < 0) {
+	    return "-";
+	} else {
+	    return String.valueOf(points);
+	}
+    }
+    
     public void setFinalHomeScore(int finalHomeScore) {
-        this.finalHomeScore = finalHomeScore;
+        this.finalHomeScore = this.getStringOfScorePoints(finalHomeScore);
     }
     public void setFinalGuestScore(int finalGuestScore) {
-        this.finalGuestScore = finalGuestScore;
+        this.finalGuestScore = this.getStringOfScorePoints(finalGuestScore);
     }
     public void setHalfHomeScore(int halfHomeScore) {
-        this.halfHomeScore = halfHomeScore;
+        this.halfHomeScore = this.getStringOfScorePoints(halfHomeScore);
     }
     public void setHalfGuestScore(int halfGuestScore) {
-        this.halfGuestScore = halfGuestScore;
+        this.halfGuestScore = this.getStringOfScorePoints(halfGuestScore);
     }
     public void setStadiumCapacity(int stadiumCapacity) {
         this.stadiumCapacity = stadiumCapacity;
@@ -89,19 +98,19 @@ public class DefaultMatchDetailsSummaryData implements MatchDetailsSummaryData {
 	return this.guestTeamIconURL;
     }
     @Override
-    public int getFinalHomeScore() {
+    public String getFinalHomeScore() {
 	return this.finalHomeScore;
     }
     @Override
-    public int getFinalGuestScore() {
+    public String getFinalGuestScore() {
 	return this.finalGuestScore;
     }
     @Override
-    public int getHalfHomeScore() {
+    public String getHalfHomeScore() {
 	return this.halfHomeScore;
     }
     @Override
-    public int getHalfGuestScore() {
+    public String getHalfGuestScore() {
 	return this.halfGuestScore;
     }
     @Override
