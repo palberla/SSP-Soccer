@@ -5,9 +5,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
-import java.util.Calendar;
 
 import de.hofuniversity.core.Match;
+
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
 
 public class DatabaseMatchWriter {
     

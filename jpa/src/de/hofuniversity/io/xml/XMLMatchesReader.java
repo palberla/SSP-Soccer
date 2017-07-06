@@ -2,7 +2,6 @@ package de.hofuniversity.io.xml;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.Reader;
 
 import org.jdom2.Document;
 import org.jdom2.Element;

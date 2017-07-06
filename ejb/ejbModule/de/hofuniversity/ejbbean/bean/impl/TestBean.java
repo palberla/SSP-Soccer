@@ -7,6 +7,12 @@ import javax.ejb.Stateless;
 
 import de.hofuniversity.ejbbean.bean.TestRemote;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 @Stateless(name = TestRemote.MAPPED_NAME, mappedName = TestRemote.MAPPED_NAME)
 public class TestBean implements TestRemote {
     

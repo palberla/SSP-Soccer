@@ -7,6 +7,12 @@ import de.hofuniversity.core.GeologicalCoordinates;
 import de.hofuniversity.core.Stadium;
 import de.hofuniversity.core.cache.TeamCache;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
 public class XMLStadiumReader {
     
     

@@ -4,6 +4,12 @@ import de.hofuniversity.ejbbean.bean.impl.TeamDetailsBean;
 import de.hofuniversity.ejbbean.data.MatchGroupSummaryData;
 import de.hofuniversity.ejbbean.data.TeamDetailsSummaryData;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class MainTeamDetailsBean {
 
     public static void main(String[] args) {

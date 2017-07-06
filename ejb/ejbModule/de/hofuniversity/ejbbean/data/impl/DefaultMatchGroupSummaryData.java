@@ -2,6 +2,12 @@ package de.hofuniversity.ejbbean.data.impl;
 
 import de.hofuniversity.ejbbean.data.MatchGroupSummaryData;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class DefaultMatchGroupSummaryData implements MatchGroupSummaryData {
 
     private String homeTeamName, homeTeamIconUrl, guestTeamName, guestTeamIconUrl;

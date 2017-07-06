@@ -2,6 +2,12 @@ package de.hofuniversity.ejbbean.data.impl;
 
 import de.hofuniversity.ejbbean.data.MatchDetailsGoalSummaryData;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class DefaultMatchDetailsGoalSummaryData implements MatchDetailsGoalSummaryData {
     
     private int homeScore, guestScore;

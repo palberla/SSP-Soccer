@@ -3,6 +3,12 @@ package de.hofuniversity.core.cache;
 import de.hofuniversity.core.Player;
 import de.hofuniversity.io.xml.util.PlayerNameEqualizer;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
 public class PlayerCache extends Cache<Player> {
     private static PlayerCache INSTANCE;
     private static PlayerNameEqualizer nameEqualizer;

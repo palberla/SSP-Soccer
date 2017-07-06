@@ -1,5 +1,11 @@
 package de.hofuniversity.ejbbean.data;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public interface MatchGroupSummaryData {
     
     public String getHomeTeamName();

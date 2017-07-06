@@ -2,6 +2,12 @@ package de.hofuniversity.ejbbean.data.impl;
 
 import de.hofuniversity.ejbbean.data.GroupListSummaryData;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class DefaultGroupListSummaryData implements GroupListSummaryData {
     
     private long orderId;

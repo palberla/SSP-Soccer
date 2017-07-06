@@ -2,6 +2,12 @@ package de.hofuniversity.core.cache;
 
 import de.hofuniversity.core.Stadium;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
 public class StadiumCache extends Cache<Stadium> {
     
     private static StadiumCache INSTANCE;

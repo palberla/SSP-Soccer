@@ -4,6 +4,13 @@ import java.util.Comparator;
 
 import de.hofuniversity.ejbbean.data.TeamGroupSummaryData;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
+
 public class TableListComparator implements Comparator<TeamGroupSummaryData> {
 
     @Override

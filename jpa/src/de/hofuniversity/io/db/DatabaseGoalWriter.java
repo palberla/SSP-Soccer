@@ -6,6 +6,12 @@ import java.sql.SQLException;
 
 import de.hofuniversity.core.Goal;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class DatabaseGoalWriter {
     
     private static String GOAL_INSERT_STATEMENT = "INSERT INTO t_goal "

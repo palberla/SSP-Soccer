@@ -17,7 +17,7 @@ import de.hofuniversity.util.ExceptionText;
  */
 
 /**
- * @author Michael Jahn
+ * @author Markus Exner
  */
 @Entity
 @Table(name = "t_team")

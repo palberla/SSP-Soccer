@@ -3,7 +3,6 @@
  */
 package de.hofuniversity;
 
-import java.io.FileReader;
 
 import de.hofuniversity.core.Goal;
 import de.hofuniversity.core.Match;

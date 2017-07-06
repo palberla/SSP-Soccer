@@ -5,9 +5,13 @@ import javax.faces.bean.ViewScoped;
 import javax.naming.directory.InitialDirContext;
 
 import de.hofuniversity.ejbbean.bean.MatchDetailsRemote;
-import de.hofuniversity.ejbbean.bean.TableListRemote;
-import de.hofuniversity.ejbbean.bean.impl.MatchDetailsBean;
 import de.hofuniversity.ejbbean.data.MatchDetailsSummaryData;
+
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
 
 @ManagedBean
 @ViewScoped

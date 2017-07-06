@@ -14,6 +14,12 @@ import de.hofuniversity.ejbbean.data.impl.DefaultMatchGroupSummaryData;
 import de.hofuniversity.queries.MatchQuery;
 import de.hofuniversity.queries.QueryCache;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
 @Stateless(name = GroupListRemote.MAPPED_NAME, mappedName = GroupListRemote.MAPPED_NAME)
 public class GroupListBean implements GroupListRemote {
     

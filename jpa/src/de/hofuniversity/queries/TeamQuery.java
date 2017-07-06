@@ -13,6 +13,12 @@ import javax.persistence.criteria.Root;
 
 import de.hofuniversity.core.Team;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class TeamQuery {
 
     private EntityManagerFactory EntityManagerFactory = null;

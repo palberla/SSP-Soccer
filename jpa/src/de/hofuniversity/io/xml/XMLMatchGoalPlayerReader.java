@@ -5,6 +5,12 @@ import org.jdom2.Element;
 import de.hofuniversity.core.Player;
 import de.hofuniversity.io.xml.util.PlayerNameNormalizer;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class XMLMatchGoalPlayerReader {
     
     private PlayerNameNormalizer playerNameNormalizer;

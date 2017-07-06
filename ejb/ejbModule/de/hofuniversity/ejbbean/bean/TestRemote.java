@@ -4,6 +4,12 @@ import java.util.List;
 
 import javax.ejb.Remote;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 @Remote
 public interface TestRemote {
     public final String MAPPED_NAME = "ejb/Test";

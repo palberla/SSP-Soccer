@@ -12,6 +12,12 @@ import de.hofuniversity.ejbbean.data.impl.DefaultGoalGetterSummaryData;
 import de.hofuniversity.queries.PlayerQuery;
 import de.hofuniversity.queries.QueryCache;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 @Stateless(name = GoalGetterListRemote.MAPPED_NAME, mappedName = GoalGetterListRemote.MAPPED_NAME)
 public class GoalGetterListBean implements GoalGetterListRemote {
     

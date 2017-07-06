@@ -12,6 +12,12 @@ import de.hofuniversity.ejbbean.data.impl.DefaultMatchDetailsSummaryData;
 import de.hofuniversity.queries.MatchQuery;
 import de.hofuniversity.queries.QueryCache;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 @Stateless(name = MatchDetailsRemote.MAPPED_NAME, mappedName = MatchDetailsRemote.MAPPED_NAME)
 public class MatchDetailsBean implements MatchDetailsRemote {
     
