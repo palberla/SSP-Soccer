@@ -12,13 +12,13 @@ public interface MatchDetailsSummaryData {
     
     public String getGuestTeamIconURL();
     
-    public int getFinalHomeScore();
+    public String getFinalHomeScore();
     
-    public int getFinalGuestScore();
+    public String getFinalGuestScore();
     
-    public int getHalfHomeScore();
+    public String getHalfHomeScore();
     
-    public int getHalfGuestScore();
+    public String getHalfGuestScore();
     
     public String getStadiumName();
     
