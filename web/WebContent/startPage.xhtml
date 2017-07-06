@@ -19,6 +19,7 @@
 		.column4 {width: 75px}
 		.row {height: 45px}
 		body {background-image: url("Rasen_Background.jpg"); background-repeat: no-repeat; background-attachment: fixed;}
+		#table {background-color: #f2f2f2; width: 35%; margin: 0 auto}
 	</style>
   </head>
   <body>
@@ -240,7 +241,7 @@
   </div><!-- /.container-fluid -->
 </nav>
     <h1 align="center">Bundesliga | Tabelle</h1>
-    <div align="center" style="background-color: #f2f2f2;">
+    <div id="table">
     <h:dataTable class="table-condensed table-striped" columnClasses="column1, column2, column3, column4" rowClasses="row" value="#{webTableBean.tableList}" var="team">
 	<h:column>
 		<h:graphicImage url="#{team.teamIconUrl}" />

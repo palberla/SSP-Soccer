@@ -19,6 +19,7 @@
 		.column3 {width: 75px}
 		.column4 {width: 75px}
 		.row {height: 45px}
+		#goalGetter {background-color: #f2f2f2; width: 25%; margin: 0 auto}
 	</style>
   </head>
   <body>
@@ -240,7 +241,7 @@
   </div><!-- /.container-fluid -->
 </nav>
     <h1 align="center">Bundesliga | Torschützenliste</h1>
-  <div align="center" style="background-color: #f2f2f2;">
+  <div id="goalGetter">
     <h:dataTable class="table-condensed table-striped" columnClasses="column1, column2, column3" rowClasses="row" value="#{webGoalGetterBean.goalGetterList()}" var="goalGetter">
 	<h:column>
 		<h:graphicImage url="#{goalGetter.teamIconURL}" />
