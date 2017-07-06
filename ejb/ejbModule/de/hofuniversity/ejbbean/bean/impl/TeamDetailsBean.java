@@ -43,11 +43,15 @@ public class TeamDetailsBean implements TeamDetailsRemote {
     {
 	return this.getQueryCache().getMatchQuery();
     }
-    
     public TeamDetailsSummaryData getTeamDetails(int id) {
-	DefaultTeamDetailsSummaryData tdsd = new DefaultTeamDetailsSummaryData();
 	Team team = this.getTeamQuery().getTeam(id);
-	List<Match> matchList = this.getMatchQuery().getTeamMatches(id);
+	return this.getTeamDetails(team);
+    }
+    
+    private TeamDetailsSummaryData getTeamDetails(Team team) {
+	DefaultTeamDetailsSummaryData tdsd = new DefaultTeamDetailsSummaryData();
+	
+	List<Match> matchList = this.getMatchQuery().getTeamMatches(team.getId());
 	
 	tdsd.setTeamName(team.getName());
 	tdsd.setTeamIconURL(team.getIconURL());
@@ -107,5 +111,11 @@ public class TeamDetailsBean implements TeamDetailsRemote {
 	dmgsd.setGuestTeamIconUrl(guestTeam.getIconURL());
 	
 	return dmgsd;
+    }
+
+    @Override
+    public TeamDetailsSummaryData getTeamDetailsForIconURL(String iconURL) {
+	Team team = this.getTeamQuery().getTeam(iconURL);
+	return this.getTeamDetails(team);
     }
 }

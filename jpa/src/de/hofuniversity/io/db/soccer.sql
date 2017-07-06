@@ -71,3 +71,29 @@ CREATE TABLE `soccer`.`t_goal` (
   CONSTRAINT FK_GOAL_PLAYER FOREIGN KEY FK_PLAYER (c_player_id) REFERENCES t_player (c_id) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT FK_GOAL_MATCH FOREIGN KEY FK_MATCH (c_match_id) REFERENCES t_match (c_id) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB;
+
+CREATE TABLE `soccer`.`t_user` (
+  `id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `c_username` VARCHAR(35) NOT NULL,
+  `c_password` VARCHAR(35) NOT NULL,
+  `c_name` VARCHAR(35) NOT NULL,
+  
+  PRIMARY KEY (id)
+) ENGINE=InnoDB;
+
+CREATE TABLE `soccer`.`t_group` (
+  `id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `c_groupname` VARCHAR(35) NOT NULL,
+  
+  PRIMARY KEY (id)
+) ENGINE=InnoDB;
+
+CREATE TABLE `soccer`.`t_user_group` (
+  `userID` SMALLINT UNSIGNED NOT NULL,
+  `groupID` SMALLINT UNSIGNED NOT NULL,
+
+  CONSTRAINT FK_USER FOREIGN KEY FK_USER (userID) REFERENCES t_user (id) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT FK_GROUP FOREIGN KEY FK_GROUP (groupID) REFERENCES t_group (id) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB;
+
+CREATE OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `soccer`.`v_user_group` AS select `soccer`.`t_user`.`c_username` AS `c_username`,`soccer`.`t_user`.`c_password` AS `c_password`,`soccer`.`t_group`.`c_groupname` AS `c_groupname` from (`soccer`.`t_user` join `soccer`.`t_group`), `soccer`.`t_user_group` WHERE `soccer`.`t_user`.`id` = `soccer`.`t_user_group`.`userID` AND `soccer`.`t_group`.`id` = `soccer`.`t_user_group`.`groupID`;
