@@ -30,7 +30,7 @@ public class TableListBean implements TableListRemote {
     {
 	if (this.queryCache == null)
 	{
-	    this.queryCache = QueryCache.getQueryCache();
+	    this.queryCache = QueryCache.getInstance();
 	}
 	return this.queryCache;
     }

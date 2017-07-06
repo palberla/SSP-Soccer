@@ -4,21 +4,13 @@ public class QueryCache {
     
     private static QueryCache INSTANCE = null;
     
-    private GoalQuery goalQuery;
     private MatchQuery matchQuery;
     private PlayerQuery playerQuery;
     private StadiumQuery stadiumQuery;
     private TeamQuery teamQuery;
     
     private QueryCache() {}
-    
-    public GoalQuery getGoalQuery() {
-	if (goalQuery == null)
-	{
-	    this.goalQuery = new GoalQuery();
-	}
-        return goalQuery;
-    }
+
 
     public MatchQuery getMatchQuery() {
 	if (matchQuery == null)
@@ -52,7 +44,7 @@ public class QueryCache {
         return teamQuery;
     }
     
-    public static QueryCache getQueryCache()
+    public static QueryCache getInstance()
     {
 	if (INSTANCE == null)
 	{

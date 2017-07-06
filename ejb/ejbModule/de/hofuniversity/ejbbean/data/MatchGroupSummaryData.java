@@ -10,11 +10,11 @@ public interface MatchGroupSummaryData {
     
     public String getGuestTeamIconUrl();
     
-    public int getHomeTeamFinalPoints();
+    public String getHomeTeamFinalPoints();
     
-    public int getGuestTeamFinalPoints();
+    public String getGuestTeamFinalPoints();
     
-    public int getHomeTeamHalfPoints();
+    public String getHomeTeamHalfPoints();
     
-    public int getGuestTeamHalfPoints();
+    public String getGuestTeamHalfPoints();
 }
