@@ -1,5 +1,6 @@
 package de.hofuniversity.queries;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -76,6 +77,24 @@ public class MatchQuery {
 	query.setParameter("id", matchId);
 
 	return query.getSingleResult();
+    }
+    
+    public List<Match> getAllMatches() {
+
+	TypedQuery<Match> query = this.getEntityManager().createQuery(
+		"SELECT m FROM Match m", Match.class);
+
+	return query.getResultList();
+    }
+    
+    public List<Long> getAllGroups()
+    {
+	List<Long> groupList = new ArrayList<Long>();
+	for (Object object : this.getEntityManager().createQuery("SELECT m.groupId FROM Match m GROUP BY m.groupId ORDER BY m.groupId").getResultList())
+	{
+	    groupList.add((Long) object);
+	}
+	return groupList;
     }
 }
 

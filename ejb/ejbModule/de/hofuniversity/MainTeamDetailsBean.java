@@ -37,6 +37,4 @@ public class MainTeamDetailsBean {
 		+ " (" + mgsd.getHomeTeamHalfPoints() + ":" + mgsd.getGuestTeamHalfPoints() + ")"), mgsd.getGuestTeamName());
 	System.out.println();
     }
-    // private List<String> teamPlayerList;
-
 }

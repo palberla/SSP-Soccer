@@ -6,7 +6,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.ParameterExpression;
+import javax.persistence.criteria.Root;
 
+import de.hofuniversity.core.Goal;
 import de.hofuniversity.core.Player;
 
 public class PlayerQuery {
@@ -35,13 +40,6 @@ public class PlayerQuery {
 	}
     }
     
-    public Player getPlayer(int playerId)
-    {
-	TypedQuery<Player> query = this.getEntityManager().createQuery("SELECT p FROM Player p WHERE p.id = :id", Player.class);
-	query.setParameter("id", playerId);
-
-	return query.getSingleResult();
-    }
     
     public List<Object[]> getGoalGetterDataList()
     {
