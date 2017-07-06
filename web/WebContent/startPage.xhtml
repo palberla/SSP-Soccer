@@ -86,7 +86,7 @@
 </nav>
     <h1 align="center">Bundesliga | Tabelle</h1>
   <div align="center" style="background-color: #f2f2f2;">
-    <h:dataTable class="table-condensed table-striped" columnClasses="column1, column2, column3, column4" rowClasses="row" value="#{webTableBean.tableList()}" var="team">
+    <h:dataTable class="table-condensed table-striped" columnClasses="column1, column2, column3, column4" rowClasses="row" value="#{tableListWebBean.TGSDTableList}" var="team">
 	<h:column>
 		<h:graphicImage url="#{team.teamIconUrl}" />
 		<h:outputText value=" " />
