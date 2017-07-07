@@ -61,52 +61,52 @@ public class MainWritingData {
 	System.out.println("...fertig");
 	
 	int index = 0;
-	System.out.println("Vereine");
-	for (Team team : TeamCache.getInstance().getUnmodifiableCollection())
-	{
-	    idSysout(++index, team.toString());
-	}
-	System.out.println();
+//	System.out.println("Vereine");
+//	for (Team team : TeamCache.getInstance().getUnmodifiableCollection())
+//	{
+//	    idSysout(++index, team.toString());
+//	}
+//	System.out.println();
 	
 	index = 0;
-	System.out.println("Spieler");
-	for (Player player : PlayerCache.getInstance().getUnmodifiableCollection())
-	{
-	    idSysout(++index, player.toString());
-	}
-	System.out.println();
+//	System.out.println("Spieler");
+//	for (Player player : PlayerCache.getInstance().getUnmodifiableCollection())
+//	{
+//	    idSysout(++index, player.toString());
+//	}
+//	System.out.println();
 	
 	index = 0;
-	System.out.println("Stadien");
-	for (Stadium stadium : StadiumCache.getInstance().getUnmodifiableCollection())
-	{
-	    idSysout(++index, stadium.toString());
-	}
-	System.out.println();
+//	System.out.println("Stadien");
+//	for (Stadium stadium : StadiumCache.getInstance().getUnmodifiableCollection())
+//	{
+//	    idSysout(++index, stadium.toString());
+//	}
+//	System.out.println();
 	
 	index = 0;
-	System.out.println("Tore");
-	for (Goal goal : GoalCache.getInstance().getUnmodifiableCollection())
-	{
-	    idSysout(++index, goal.toString());
-	}
-	System.out.println();
+//	System.out.println("Tore");
+//	for (Goal goal : GoalCache.getInstance().getUnmodifiableCollection())
+//	{
+//	    idSysout(++index, goal.toString());
+//	}
+//	System.out.println();
 	
 	index = 0;
-	System.out.println("Ergebnisse");
-	for (Result result : ResultCache.getInstance().getUnmodifiableCollection())
-	{
-	    idSysout(++index, result.toString());
-	}
-	System.out.println();
+//	System.out.println("Ergebnisse");
+//	for (Result result : ResultCache.getInstance().getUnmodifiableCollection())
+//	{
+//	    idSysout(++index, result.toString());
+//	}
+//	System.out.println();
 	
 	index = 0;
-	System.out.println("Begegnungen");
-	for (Match match : MatchCache.getInstance().getUnmodifiableCollection())
-	{
-	    idSysout(++index, match.toString());
-	}
-	System.out.println();
+//	System.out.println("Begegnungen");
+//	for (Match match : MatchCache.getInstance().getUnmodifiableCollection())
+//	{
+//	    idSysout(++index, match.toString());
+//	}
+//	System.out.println();
 	
 	
 	System.out.println("Schreibe Stadien...");
@@ -150,7 +150,7 @@ public class MainWritingData {
 	long seconds = milliseconds / 1000;
 	long minutes = seconds / 60;
 	seconds = seconds % 60;
-	System.out.println("Zeit: " + minutes + " Minuten und " + seconds + "Sekunden.");
+//	System.out.println("Zeit: " + minutes + " Minuten und " + seconds + "Sekunden.");
     }
     
     private static void idSysout(int index, String string)
