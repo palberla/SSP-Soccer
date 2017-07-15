@@ -1,5 +1,11 @@
 package de.hofuniversity.queries;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class QueryCache {
     
     private static QueryCache INSTANCE = null;

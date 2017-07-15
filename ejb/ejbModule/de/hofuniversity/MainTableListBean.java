@@ -2,9 +2,14 @@ package de.hofuniversity;
 
 import java.util.Collection;
 
-import de.hofuniversity.core.Match;
 import de.hofuniversity.ejbbean.bean.impl.TableListBean;
 import de.hofuniversity.ejbbean.data.TeamGroupSummaryData;
+
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
 
 public class MainTableListBean {
 

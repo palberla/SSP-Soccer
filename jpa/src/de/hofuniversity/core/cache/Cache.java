@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ * 
+ */
+
 public abstract class Cache<E>
 {
     private Collection<E> collection;

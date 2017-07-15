@@ -2,6 +2,12 @@ package de.hofuniversity.ejbbean.data;
 
 import java.util.List;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public interface TeamDetailsSummaryData {
     
     public String getTeamName();

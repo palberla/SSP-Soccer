@@ -16,7 +16,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 
 import de.hofuniversity.core.connect.ConnectToGoal;
 import de.hofuniversity.core.connect.ConnectToGuestTeam;

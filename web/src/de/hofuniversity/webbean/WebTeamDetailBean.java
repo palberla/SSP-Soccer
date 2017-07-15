@@ -1,7 +1,5 @@
 package de.hofuniversity.webbean;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
@@ -9,6 +7,12 @@ import javax.naming.directory.InitialDirContext;
 
 import de.hofuniversity.ejbbean.bean.TeamDetailsRemote;
 import de.hofuniversity.ejbbean.data.TeamDetailsSummaryData;
+
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
 
 @ManagedBean
 @ViewScoped

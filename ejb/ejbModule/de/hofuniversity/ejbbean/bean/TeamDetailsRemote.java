@@ -4,6 +4,12 @@ import javax.ejb.Remote;
 
 import de.hofuniversity.ejbbean.data.TeamDetailsSummaryData;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 @Remote
 public interface TeamDetailsRemote {
     

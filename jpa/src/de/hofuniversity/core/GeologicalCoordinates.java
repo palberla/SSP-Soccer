@@ -5,6 +5,12 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 @Embeddable
 public class GeologicalCoordinates implements Serializable
 {

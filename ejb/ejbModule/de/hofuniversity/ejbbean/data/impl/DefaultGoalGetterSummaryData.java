@@ -2,6 +2,12 @@ package de.hofuniversity.ejbbean.data.impl;
 
 import de.hofuniversity.ejbbean.data.GoalGetterSummaryData;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class DefaultGoalGetterSummaryData implements GoalGetterSummaryData {
     
     private int goalAmount;

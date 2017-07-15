@@ -18,6 +18,12 @@ import de.hofuniversity.queries.MatchQuery;
 import de.hofuniversity.queries.QueryCache;
 import de.hofuniversity.queries.TeamQuery;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 @Stateless(name = TeamDetailsRemote.MAPPED_NAME, mappedName = TeamDetailsRemote.MAPPED_NAME)
 public class TeamDetailsBean implements TeamDetailsRemote {
     

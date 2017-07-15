@@ -4,6 +4,12 @@ import java.util.Comparator;
 
 import de.hofuniversity.core.Goal;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
 public class GoalComparator implements Comparator<Goal> {
 
     @Override

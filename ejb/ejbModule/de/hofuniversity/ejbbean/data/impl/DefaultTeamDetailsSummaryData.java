@@ -7,6 +7,12 @@ import de.hofuniversity.core.Player;
 import de.hofuniversity.ejbbean.data.MatchGroupSummaryData;
 import de.hofuniversity.ejbbean.data.TeamDetailsSummaryData;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
 public class DefaultTeamDetailsSummaryData implements TeamDetailsSummaryData {
     
     private String teamName, teamIconURL, stadiumName, stadiumAdress, stadiumInsideURL, stadiumOutsideURL;

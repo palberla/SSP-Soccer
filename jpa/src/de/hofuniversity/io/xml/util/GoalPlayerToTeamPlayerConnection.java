@@ -5,6 +5,12 @@ import de.hofuniversity.core.Match;
 import de.hofuniversity.core.Team;
 import de.hofuniversity.core.cache.PlayerCache;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class GoalPlayerToTeamPlayerConnection {
     
     public GoalPlayerToTeamPlayerConnection() {}

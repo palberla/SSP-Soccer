@@ -2,6 +2,12 @@ package de.hofuniversity.ejbbean.data.impl;
 
 import de.hofuniversity.ejbbean.data.TeamGroupSummaryData;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
 public class DefaultTeamGroupSummaryData implements TeamGroupSummaryData {
     
     private int points, goalPlus, goalMinus, gameAmount;

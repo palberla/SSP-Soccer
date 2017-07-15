@@ -10,6 +10,12 @@ import javax.persistence.TypedQuery;
 
 import de.hofuniversity.core.Match;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class MatchQuery {
     
     private EntityManagerFactory EntityManagerFactory = null;

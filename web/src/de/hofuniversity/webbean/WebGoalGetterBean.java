@@ -7,6 +7,12 @@ import javax.faces.bean.ViewScoped;
 import de.hofuniversity.ejbbean.bean.impl.GoalGetterListBean;
 import de.hofuniversity.ejbbean.data.GoalGetterSummaryData;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 @ManagedBean
 @ViewScoped
 public class WebGoalGetterBean {

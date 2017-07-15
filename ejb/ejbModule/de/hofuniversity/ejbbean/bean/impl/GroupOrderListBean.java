@@ -12,7 +12,9 @@ import de.hofuniversity.queries.MatchQuery;
 import de.hofuniversity.queries.QueryCache;
 
 /**
- * Session Bean implementation class GroupBean
+ * 
+ * @author Markus Exner
+ *
  */
 @Stateless(name = GroupOrderListRemote.MAPPED_NAME, mappedName = GroupOrderListRemote.MAPPED_NAME)
 public class GroupOrderListBean implements GroupOrderListRemote {

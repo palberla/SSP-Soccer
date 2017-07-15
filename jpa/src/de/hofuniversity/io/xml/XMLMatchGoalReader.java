@@ -5,6 +5,12 @@ import org.jdom2.Element;
 import de.hofuniversity.core.Goal;
 import de.hofuniversity.core.cache.GoalCache;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class XMLMatchGoalReader {
     
     private XMLMatchGoalPlayerReader xmlMatchGoalPlayerReader = null;

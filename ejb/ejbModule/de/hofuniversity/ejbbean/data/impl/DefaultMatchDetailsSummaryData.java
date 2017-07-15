@@ -7,6 +7,12 @@ import de.hofuniversity.core.Goal;
 import de.hofuniversity.ejbbean.data.MatchDetailsGoalSummaryData;
 import de.hofuniversity.ejbbean.data.MatchDetailsSummaryData;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class DefaultMatchDetailsSummaryData implements MatchDetailsSummaryData {
     
     private int stadiumCapacity;

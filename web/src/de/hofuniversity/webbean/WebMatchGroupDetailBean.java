@@ -9,6 +9,12 @@ import javax.naming.directory.InitialDirContext;
 import de.hofuniversity.ejbbean.bean.GroupListRemote;
 import de.hofuniversity.ejbbean.data.MatchGroupSummaryData;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
 @ManagedBean
 @ViewScoped
 public class WebMatchGroupDetailBean {

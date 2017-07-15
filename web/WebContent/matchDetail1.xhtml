@@ -4,6 +4,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
   <head>
+  	<meta name="author" content="Markus Exner"></meta>
     <meta charset="utf-8"></meta>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
@@ -20,6 +21,7 @@
 		.column4 {width: 20px}
 		.column5 {width: 360px; text-align: center}
 		.row {height: 45px}
+		#result {background-color: #f2f2f2; width: 45%; margin: 0 auto}
 	</style>
   </head>
   <body>
@@ -241,7 +243,7 @@
   </div><!-- /.container-fluid -->
 </nav>
     <h1 align="center">Bundesliga | Ergebnisse</h1>
-    <div align="center" style="background-color: #f2f2f2;">
+    <div id="result">
     <h:dataTable class="table-condensed table-striped" columnClasses="column1, column2, column3, column4, column5" rowClasses="row" value="#{webMatchGroupDetailBean.getMatchGroupList(param['id'])}" var="match">
 	<h:column>
 		<h:outputText value="#{match.homeTeamName}" />

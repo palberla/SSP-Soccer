@@ -4,6 +4,12 @@ import de.hofuniversity.ejbbean.bean.impl.MatchDetailsBean;
 import de.hofuniversity.ejbbean.data.MatchDetailsGoalSummaryData;
 import de.hofuniversity.ejbbean.data.MatchDetailsSummaryData;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
 public class MainMatchDetailsBean {
 
     public static void main(String[] args) {

@@ -7,6 +7,12 @@ import javax.persistence.TypedQuery;
 
 import de.hofuniversity.core.Stadium;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
 public class StadiumQuery {
     
     private EntityManagerFactory EntityManagerFactory = null;

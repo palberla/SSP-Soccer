@@ -18,6 +18,12 @@ import de.hofuniversity.queries.MatchQuery;
 import de.hofuniversity.queries.QueryCache;
 import de.hofuniversity.queries.TeamQuery;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 
 @Stateless(name = TableListRemote.MAPPED_NAME, mappedName = TableListRemote.MAPPED_NAME)
 public class TableListBean implements TableListRemote {

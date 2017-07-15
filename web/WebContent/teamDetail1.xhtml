@@ -4,6 +4,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
   <head>
+  	<meta name="author" content="Markus Exner, Michael Jahn"></meta>
     <meta charset="utf-8"></meta>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
@@ -21,9 +22,13 @@
 		.column5 {width: 200px; text-align: center}
 		.row {height: 45px}
 		.teamHeader {font-size: larger; font: bolder;}
-		#leftContent {float: left; width: 30%; background-color: #f2f2f2; margin-left: 60px;}
-		#rightContent {float: right; width: 40%; background-color: #f2f2f2; margin-right: 40px;}
+		#leftContent {float: left; width: 13%; background-color: #f2f2f2; margin-left: 200px;}
+		#rightContent {float: right; width: 30%; background-color: #f2f2f2; margin-right: 180px;}
 		#footer {position: absolute; bottom: 0px; background-color: black; width: 80%; height: 80px;}
+		#pictureDiv {width: 90%; height: 350px; margin: 0 auto; overflow: hidden;}
+		#pictureLeft {float: left;}
+		#pictureRight{float: right;}
+		.pictureSize {width: 250px; height: 250px;}
 	</style>
   </head>
   <body>
@@ -251,8 +256,32 @@
 	</h:column>
 </h:dataTable>
 </h1>
+<div id="pictureDiv">
+<div id="pictureLeft">
+   <h:dataTable value="#{webTeamDetailBean.getTeamDetails(param['id'])}" var="team">
+   <h:column>
+   <h3 style="background-color: #e6ffff">
+   <h:outputText value="#{team.stadiumAdress}" />
+   </h3>
+   <h:graphicImage styleClass="pictureSize" value="#{team.stadiumOutsideURL}" />
+   	</h:column>
+   </h:dataTable>
+</div>
+<div id="pictureRight">
+<h:dataTable value="#{webTeamDetailBean.getTeamDetails(param['id'])}" var="team">
+ 	<h:column>
+ 	<h3 style="background-color: #e6ffff">
+ 		<h:outputText value="#{team.stadiumName}" />
+ 		<h:outputText value=", Plätze: " />
+ 		<h:outputText value="#{team.stadiumCapacity}" />
+ 		</h3>
+ 		<h:graphicImage styleClass="pictureSize" value="#{team.stadiumInsideURL}" />
+ 	</h:column>
+ 	</h:dataTable>
+</div>
+</div>
 <!-- Main div -->
-<div align="center">
+<div align="center" style="margin-top: 200px">
 <!-- Left content -->
 <div id="leftContent">
 	<h:dataTable class="table-condensed table-striped" columnClasses="column1" rowClasses="row" value="#{webTeamDetailBean.getTeamDetails(param['id']).teamPlayerList}" var="team">
@@ -292,12 +321,10 @@
 	</h:column>
 	</h:dataTable>
 </div>
-<div id="footer">
-
-</div>	
-	
 
 </div>
+
+	
 
 
 

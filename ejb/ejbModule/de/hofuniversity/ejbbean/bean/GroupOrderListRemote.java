@@ -6,6 +6,13 @@ import javax.ejb.Remote;
 
 import de.hofuniversity.ejbbean.data.GroupListSummaryData;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
+
 @Remote
 public interface GroupOrderListRemote {
     public final String MAPPED_NAME = "ejb/GroupOrderList";

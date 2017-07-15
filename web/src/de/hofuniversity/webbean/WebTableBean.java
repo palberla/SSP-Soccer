@@ -9,9 +9,13 @@ import javax.faces.bean.ViewScoped;
 import javax.naming.directory.InitialDirContext;
 
 import de.hofuniversity.ejbbean.bean.TableListRemote;
-import de.hofuniversity.ejbbean.bean.impl.TableListBean;
 import de.hofuniversity.ejbbean.data.TeamGroupSummaryData;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
 
 @ManagedBean
 @ViewScoped

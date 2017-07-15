@@ -2,6 +2,12 @@ package de.hofuniversity.core.cache;
 
 import de.hofuniversity.core.Match;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
 public class MatchCache extends Cache<Match> {
     
     private static MatchCache INSTANCE;

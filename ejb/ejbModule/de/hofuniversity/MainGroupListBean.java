@@ -5,6 +5,12 @@ import java.util.Collection;
 import de.hofuniversity.ejbbean.bean.impl.GroupListBean;
 import de.hofuniversity.ejbbean.data.MatchGroupSummaryData;
 
+/**
+ * 
+ * @author Michael Jahn
+ *
+ */
+
 public class MainGroupListBean {
 
     public static void main(String[] args) {

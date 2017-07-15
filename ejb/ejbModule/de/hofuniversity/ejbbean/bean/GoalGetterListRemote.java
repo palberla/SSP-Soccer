@@ -6,6 +6,12 @@ import javax.ejb.Remote;
 
 import de.hofuniversity.ejbbean.data.GoalGetterSummaryData;
 
+/**
+ * 
+ * @author Markus Exner
+ *
+ */
+
 @Remote
 public interface GoalGetterListRemote {
     public final String MAPPED_NAME = "ejb/GoalGetterList";
